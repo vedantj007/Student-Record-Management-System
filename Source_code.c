@@ -5,8 +5,6 @@
 #define USERNAME "gsv.admin@gsv.ac.in"
 #define PASSWORD "GSV#2028"
 #define FILE_NAME "students.csv"
-#define USERNAME2 "ADMIN"
-#define PASS2 "Password"
 
 // Define a structure for student data
 typedef struct {
@@ -19,11 +17,7 @@ typedef struct {
     char dob[11];
     char blood_group[5];
     char medical_condition[100];
-    int em_i; 
-    int ep; 
-    int cp;
-    int im_c;
-    int irse;
+    int em_i, ep, cp, im_c, irse;
 } Student;
 
 // Function prototypes
@@ -101,7 +95,7 @@ int is_authenticated() {
     printf("Enter Password: ");
     scanf("%s", input_password);
 
-    if(strcmp(input_username, USERNAME2) == 0 && strcmp(input_password, PASS2) == 0){
+    if(strcmp(input_username, USERNAME) == 0 && strcmp(input_password, PASSWORD) == 0){
         printf("Authentication Succesfull.\n");
         return 1;
     } else {
